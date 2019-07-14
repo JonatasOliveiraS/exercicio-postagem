@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.br.java.web.models.PostagemModel;
-import com.br.java.web.services.ListaService;
+import com.br.java.web.services.PostagemService;
 
 @Controller
-public class ListaController {
+public class PostagemController {
 
 	@Autowired
-	ListaService listaService;
-	private ListaController postagemService;
+	PostagemService listaService;
+	private PostagemController postagemService;
 
 	@RequestMapping
 	@ResponseBody
@@ -35,7 +35,7 @@ public class ListaController {
 	@RequestMapping("/delete/{nome}")
 	@ResponseBody
 	public String deletarName(@PathVariable String nome) {
-		return listaService.deletarName(nome);
+		return listaService.deletarNome(nome);
 	}
 
 	@RequestMapping("/adicionar/{nome}")

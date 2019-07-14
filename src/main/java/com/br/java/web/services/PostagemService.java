@@ -10,9 +10,9 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ListaService {
+public class PostagemService {
 
-	private List<String> nomes = new ArrayList<String>(Arrays.asList("Bruna", "Milena", "Jhol"));
+	private List<String> nomes = new ArrayList<String>(Arrays.asList("Jonatas", "Bruna", "Milena"));
 
 	public List<String> mostrarLista() {
 		return this.nomes;
@@ -30,7 +30,7 @@ public class ListaService {
 		return retorno;
 	}
 
-	public String deletarName(String deleteUsuario) {
+	public String deletarNome(String deleteUsuario) {
 		String nomeDelete = "";
 
 		for (String nome : nomes) {
@@ -63,9 +63,9 @@ public class ListaService {
 	private Map<Integer, PostagemModel> postagens = new HashMap<Integer, PostagemModel>();
 
 	public void adicionarPostagens() {
-		postagens.put(1, new PostagemModel("Milena", "Não consigo assistir uma série inteira"));
-		postagens.put(2, new PostagemModel("Bruna", "Hello world"));
-		postagens.put(3, new PostagemModel("Jhol", "Skate é legal"));
+		postagens.put(1, new PostagemModel("Jonatas", "blá blá blá"));
+		postagens.put(2, new PostagemModel("Bruna", "olá mundo kkk"));
+		postagens.put(3, new PostagemModel("Milena", "eu sei lá"));
 	}
 
 	public Map<Integer, PostagemModel> mostrarPostagens() {
